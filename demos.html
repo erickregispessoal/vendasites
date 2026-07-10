@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstração dos Templates - VendaSites</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --whatsapp: #25D366;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --light: #f1f5f9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--light);
+            color: var(--dark);
+        }
+
+        .demo-nav {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .demo-nav a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .demo-header {
+            text-align: center;
+            padding: 40px 24px 24px;
+        }
+
+        .demo-header h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .demo-header p {
+            color: var(--gray);
+        }
+
+        .demo-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            padding: 0 24px 24px;
+        }
+
+        .demo-tab {
+            padding: 12px 24px;
+            border: 2px solid #e2e8f0;
+            background: white;
+            cursor: pointer;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+
+        .demo-tab.active {
+            border-color: var(--primary);
+            background: var(--primary);
+            color: white;
+        }
+
+        .demo-frame {
+            max-width: 1200px;
+            margin: 0 auto 32px;
+            height: 70vh;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+            background: white;
+        }
+
+        .demo-frame iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .demo-cta {
+            text-align: center;
+            padding: 40px 24px 60px;
+        }
+
+        .demo-cta a {
+            display: inline-block;
+            background: var(--whatsapp);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: background 0.2s;
+        }
+
+        .demo-cta a:hover {
+            background: #1da851;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="demo-nav">
+    <a href="index.html">&#8592; Voltar ao Início</a>
+    <a href="https://wa.me/5547996451567?text=Ol%C3%A1!%20Vim%20pela%20demonstra%C3%A7%C3%A3o%20e%20quero%20um%20or%C3%A7amento." target="_blank">Falar no WhatsApp &#8594;</a>
+</nav>
+
+<div class="demo-header">
+    <h1>Veja os Templates em Ação</h1>
+    <p>Clique nas abas abaixo para visualizar cada template</p>
+</div>
+
+<div class="demo-tabs">
+    <button class="demo-tab active" onclick="showDemo('lanchonete')">Lanchonete</button>
+    <button class="demo-tab" onclick="showDemo('barbearia')">Barbearia</button>
+</div>
+
+<div class="demo-frame">
+    <iframe id="demoFrame" src="https://erickregispessoal.github.io/lanchoneteze/"></iframe>
+</div>
+
+<div class="demo-cta">
+    <a href="https://wa.me/5547996451567?text=Ol%C3%A1!%20Vi%20os%20templates%20e%20quero%20um%20site%20assim!" target="_blank">Quero um Site Assim &#8594;</a>
+</div>
+
+<script>
+function showDemo(type) {
+    var frame = document.getElementById('demoFrame');
+    var tabs = document.querySelectorAll('.demo-tab');
+
+    for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove('active');
+    }
+
+    if (type === 'lanchonete') {
+        frame.src = 'https://erickregispessoal.github.io/lanchoneteze/';
+        tabs[0].classList.add('active');
+    } else {
+        frame.src = 'https://erickregispessoal.github.io/barberlux/';
+        tabs[1].classList.add('active');
+    }
+}
+</script>
+
+</body>
+</html>
