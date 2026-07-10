@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda de Sites - Lanchonetes e Barbearias</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">VendaSites</div>
+            <ul>
+                <li><a href="#inicio">InÃ­cio</a></li>
+                <li><a href="#templates">Templates</a></li>
+                <li><a href="demos.html">DemonstraÃ§Ã£o</a></li>
+                <li><a href="#clientes">Clientes</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h1>Sites Profissionais para Lanchonetes e Barbearias</h1>
+            <p>Transforme seu negÃ³cio com um site que atrai mais clientes</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/5547996451567?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20para%20site." class="btn btn-whatsapp" target="_blank">OrÃ§amento via WhatsApp</a>
+                <a href="#templates" class="btn">Ver Templates</a>
+            </div>
+        </section>
+
+        <section id="beneficios">
+            <h2>Por que ter um site?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Mais Clientes</h3>
+                    <p>ApareÃ§a no Google quando pessoas buscarem por lanchonetes ou barbearias na sua regiÃ£o</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>CardÃ¡pio Digital</h3>
+                    <p>Clientes podem ver seu cardÃ¡pio antes de ir ao estabelecimento</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Agendamento Online</h3>
+                    <p>Permita que clientes agendem horÃ¡rios direto pelo site</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>WhatsApp Integrado</h3>
+                    <p>Clientes entram em contato diretamente pelo WhatsApp</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="templates">
+            <h2>Nossos Templates</h2>
+            <div class="template-grid">
+                <div class="template-card">
+                    <img src="images/template-lanchonete.jpg" alt="Template Lanchonete">
+                    <h3>Lanchonete Gourmet</h3>
+                    <p>Design moderno com cardÃ¡pio digital, galeria de fotos e mapa</p>
+                    <ul class="template-features">
+                        <li>CardÃ¡pio digital interativo</li>
+                        <li>Galeria de fotos profissionais</li>
+                        <li>WhatsApp integrado</li>
+                        <li>Mapa de localizaÃ§Ã£o</li>
+                        <li>Responsivo para celular</li>
+                    </ul>
+                    <div class="template-buttons">
+                        <a href="demos.html" class="btn">Ver DemonstraÃ§Ã£o</a>
+                        <a href="https://wa.me/5547996451567?text=Ol%C3%A1!%20Tenho%20interesse%20no%20template%20Lanchonete%20Gourmet.%20Quero%20saber%20mais!" class="btn btn-whatsapp" target="_blank">Quero este!</a>
+                    </div>
+                </div>
+                <div class="template-card">
+                    <img src="images/template-barbearia.jpg" alt="Template Barbearia">
+                    <h3>Barbearia Style</h3>
+                    <p>Layout elegante com agendamento online e preÃ§os</p>
+                    <ul class="template-features">
+                        <li>Agendamento online</li>
+                        <li>Lista de preÃ§os</li>
+                        <li>Galeria de trabalhos</li>
+                        <li>WhatsApp integrado</li>
+                        <li>Responsivo para celular</li>
+                    </ul>
+                    <div class="template-buttons">
+                        <a href="demos.html" class="btn">Ver DemonstraÃ§Ã£o</a>
+                        <a href="https://wa.me/5547996451567?text=Ol%C3%A1!%20Tenho%20interesse%20no%20template%20Barbearia%20Style.%20Quero%20saber%20mais!" class="btn btn-whatsapp" target="_blank">Quero este!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="depoimentos">
+            <h2>O que nossos clientes dizem</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"Meu faturamento aumentou 40% depois que criei o site. Clientes encontram pelo Google e jÃ¡ chegam sabendo o que querem!"</p>
+                    <strong>- Carlos, Lanchonete Sabor da Terra</strong>
+                </div>
+                <div class="testimonial-card">
+                    <p>"O agendamento online facilitou muito. NÃ£o preciso mais atender ligaÃ§Ãµes o dia todo."</p>
+                    <strong>- Roberto, Barbearia do ZÃ©</strong>
+                </div>
+            </div>
+        </section>
+
+        <section id="clientes">
+            <h2>Gerenciar Clientes</h2>
+            <div class="client-form">
+                <input type="text" id="clientName" placeholder="Nome do Cliente">
+                <input type="email" id="clientEmail" placeholder="E-mail">
+                <input type="tel" id="clientPhone" placeholder="Telefone">
+                <select id="clientTemplate">
+                    <option value="">Selecione o Template</option>
+                    <option value="lanchonete">Lanchonete</option>
+                    <option value="barbearia">Barbearia</option>
+                </select>
+                <button onclick="addClient()">Adicionar Cliente</button>
+            </div>
+            <div id="clientList"></div>
+        </section>
+
+        <section id="contato">
+            <h2>Solicitar OrÃ§amento</h2>
+            <div class="contact-options">
+                <div class="contact-option">
+                    <h3>WhatsApp (RÃ¡pido)</h3>
+                    <p>Resposta imediata em horÃ¡rio comercial</p>
+                    <a href="https://wa.me/5547996451567?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20para%20site." class="btn btn-whatsapp" target="_blank">Falar no WhatsApp</a>
+                </div>
+                <div class="contact-option">
+                    <h3>FormulÃ¡rio</h3>
+                    <form id="contactForm">
+                        <input type="text" placeholder="Seu Nome" required>
+                        <input type="email" placeholder="Seu E-mail" required>
+                        <input type="tel" placeholder="Seu Telefone">
+                        <select id="contactType">
+                            <option value="">Tipo de NegÃ³cio</option>
+                            <option value="lanchonete">Lanchonete</option>
+                            <option value="barbearia">Barbearia</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                        <textarea placeholder="Conte mais sobre seu negÃ³cio" required></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a href="https://wa.me/5547996451567?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20um%20site." class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <footer>
+        <p>&copy; 2026 VendaSites - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
