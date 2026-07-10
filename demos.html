@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DemonstraÃ§Ã£o dos Templates - VendaSites</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .demo-container {
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .demo-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .demo-header h1 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        .demo-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        .demo-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .demo-tab {
+            padding: 1rem 2rem;
+            border: 2px solid #ddd;
+            background: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .demo-tab.active {
+            border-color: #25D366;
+            background: #25D366;
+            color: white;
+        }
+        .demo-frame {
+            width: 100%;
+            height: 70vh;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .demo-frame iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .demo-info {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: #f9f9f9;
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .demo-info h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        .demo-info ul {
+            list-style: none;
+            padding: 0;
+        }
+        .demo-info li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .demo-info li:before {
+            content: "âœ“ ";
+            color: #25D366;
+        }
+        .demo-cta {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .demo-cta .btn {
+            font-size: 1.2rem;
+            padding: 1.2rem 2.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">VendaSites</div>
+            <ul>
+                <li><a href="index.html">Voltar ao InÃ­cio</a></li>
+                <li><a href="https://wa.me/5547996451567?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20demonstra%C3%A7%C3%A3o%20e%20quero%20um%20or%C3%A7amento." target="_blank">Falar no WhatsApp</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="demo-container">
+        <div class="demo-header">
+            <h1>Veja os Templates em AÃ§Ã£o</h1>
+            <p>Clique nas abas abaixo para ver cada template funcionando</p>
+        </div>
+
+        <div class="demo-tabs">
+            <button class="demo-tab active" onclick="showDemo('lanchonete')">Lanchonete</button>
+            <button class="demo-tab" onclick="showDemo('barbearia')">Barbearia</button>
+        </div>
+
+        <div class="demo-frame">
+            <iframe id="demoFrame" src="https://erickregispessoal.github.io/lanchoneteze/"></iframe>
+        </div>
+
+        <div class="demo-info">
+            <div class="demo-info-card">
+                <h3>Funcionalidades IncluÃ­das</h3>
+                <ul>
+                    <li>Design responsivo (funciona no celular)</li>
+                    <li>BotÃ£o flutuante do WhatsApp</li>
+                    <li>CardÃ¡pio/ServiÃ§os com preÃ§os</li>
+                    <li>Mapa de localizaÃ§Ã£o</li>
+                    <li>InformaÃ§Ãµes de contato</li>
+                    <li>Otimizado para Google</li>
+                </ul>
+            </div>
+            <div class="demo-info-card">
+                <h3>PersonalizaÃ§Ã£o</h3>
+                <ul>
+                    <li>Cores adaptadas Ã  sua marca</li>
+                    <li>Logo e nome do seu negÃ³cio</li>
+                    <li>Fotos dos seus produtos</li>
+                    <li>PreÃ§os e cardÃ¡pio atualizados</li>
+                    <li>EndereÃ§o e telefone reais</li>
+                    <li>HorÃ¡rio de funcionamento</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="demo-cta">
+            <a href="https://wa.me/5547996451567?text=Ol%C3%A1!%20Vi%20os%20templates%20e%20quero%20um%20site%20assim%20para%20meu%20neg%C3%B3cio!" class="btn btn-whatsapp" target="_blank">Quero um Site Assim!</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 VendaSites - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        function showDemo(type) {
+            const frame = document.getElementById('demoFrame');
+            const tabs = document.querySelectorAll('.demo-tab');
+            
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            if (type === 'lanchonete') {
+                frame.src = 'https://erickregispessoal.github.io/lanchoneteze/';
+                tabs[0].classList.add('active');
+            } else {
+                frame.src = 'https://erickregispessoal.github.io/barberlux/';
+                tabs[1].classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
